@@ -1,2 +1,74 @@
-  qewf
-lll
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Anagrafica Utente</title>
+</head>
+<body>
+  <h2>Inserisci i tuoi dati</h2>
+
+  <label>Nome: <input type="text" id="nome"></label><br><br>
+  <label>Cognome: <input type="text" id="cognome"></label><br><br>
+  <label>Indirizzo: <input type="text" id="indirizzo"></label><br><br>
+  <label>Città: <input type="text" id="citta"></label><br><br>
+  <label>CAP: <input type="text" id="cap"></label><br><br>
+  <label>Data di nascita: <input type="date" id="dataNascita"></label><br><br>
+
+  <button onclick="inviaDati()">Invia</button>
+
+  <h3>Risultato:</h3>
+  <div id="risultato"></div>
+
+  <script>
+    function inviaDati() {
+      // Prendo i valori dai campi input
+      let nome = document.getElementById("nome").value;
+      let cognome = document.getElementById("cognome").value;
+      let indirizzo = document.getElementById("indirizzo").value;
+      let citta = document.getElementById("citta").value;
+      let cap = document.getElementById("cap").value;
+      let dataNascita = document.getElementById("dataNascita").value;
+
+      // Calcolo l'età
+      let oggi = new Date();
+      let nascita = new Date(dataNascita);
+      let eta = oggi.getFullYear() - nascita.getFullYear();
+
+      // Trovo l'anno di nascita
+      let annoNascita = nascita.getFullYear();
+
+      // Determino la generazione
+      let generazione = "";
+
+      if (annoNascita >= 2013) {
+        generazione = "Generazione Alpha";
+      } else if (annoNascita >= 1997) {
+        generazione = "Generazione Z";
+      } else if (annoNascita >= 1981) {
+        generazione = "Millennials";
+      } else if (annoNascita >= 1965) {
+        generazione = "Generazione X";
+      } else if (annoNascita >= 1946) {
+        generazione = "Baby Boomers";
+      } else if (annoNascita >= 1928) {
+        generazione = "Generazione Silenziosa";
+      } else {
+        generazione = "Greatest Generation";
+      }
+
+      // Creo un array (vettore) con i dati
+      let datiUtente = [
+        "Nome: " + nome,
+        "Cognome: " + cognome,
+        "Indirizzo: " + indirizzo,
+        "Città: " + citta,
+        "CAP: " + cap,
+        "Età: " + eta,
+        "Generazione: " + generazione
+      ];
+
+      // Mostro il risultato
+      document.getElementById("risultato").innerHTML = "<pre>" + datiUtente.join("\n") + "</pre>";
+    }
+  </script>
+</body>
+</html>
