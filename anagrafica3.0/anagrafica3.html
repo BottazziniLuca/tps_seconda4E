@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Anagrafica con Collection</title>
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+
+<h2>Anagrafica Utente con Collection</h2>
+
+<form id="anagraficaForm">
+    Nome: <input type="text" id="nome"><br><br>
+    Cognome: <input type="text" id="cognome"><br><br>
+    Indirizzo: <input type="text" id="indirizzo"><br><br>
+    Città: <input type="text" id="citta"><br><br>
+    CAP: <input type="text" id="cap"><br><br>
+    Data di nascita: <input type="date" id="dataNascita"><br><br>
+
+    
+    Sesso:<br>
+    <input type="radio" name="sesso" value="M"> Maschio<br>
+    <input type="radio" name="sesso" value="F"> Femmina<br>
+    <input type="radio" name="sesso" value="Altro"> Altro<br><br>
+
+    
+    Provincia:
+    <select id="provincia">
+        <option value="NA">NA</option>
+        <option value="RM">RM</option>
+        <option value="MI">MI</option>
+        <option value="TO">TO</option>
+        <option value="FI">FI</option>
+    </select><br><br>
+
+    
+    Mezzi posseduti in famiglia:<br>
+    <input type="checkbox" value="Auto" class="mezzo"> Auto<br>
+    <input type="checkbox" value="Moto" class="mezzo"> Moto<br>
+    <input type="checkbox" value="Bici" class="mezzo"> Bici<br>
+    <input type="checkbox" value="Aereo" class="mezzo"> Furgone<br>
+    <input type="checkbox" value="Yacht" class="mezzo"> Barca<br><br>
+
+    
+    Materie preferite (max 3):
+    <select id="materie" multiple size="5">
+        <option value="Matematica">Matematica</option>
+        <option value="Italiano">Italiano</option>
+        <option value="Inglese">Inglese</option>
+        <option value="Storia">Storia</option>
+        <option value="Geografia">Geografia</option>
+        <option value="Informatica">Informatica</option>
+        <option value="Scienze">Scienze</option>
+        <option value="Arte">Arte</option>
+        <option value="Musica">Musica</option>
+    </select><br><br>
+
+    <button type="button" onclick="invia()">Invia</button>
+</form>
+
+<h3 id="risultato"></h3>
+
+
+
+</body>
+</html>
