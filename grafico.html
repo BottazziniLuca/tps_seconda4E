@@ -3,7 +3,7 @@
 <body>
 <h1>HTML5 Canvas arc() Method</h1>
 
-<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
+<canvas id="myCanvas" width="400" height="400">
 Sorry, your browser does not support canvas.
 </canvas>
 
@@ -14,10 +14,20 @@ const ctx = canvas.getContext("2d");
 ctx.beginPath();
 ctx.arc(95,50,40,0,2*Math.PI);
 ctx.stroke();
-</script>
+  ctx.beginPath();
 
+// Set a start-point
+ctx.moveTo(0, 0);
+
+// Set an end-point
+ctx.lineTo(200, 100);
+
+// Stroke it (Do the Drawing)
+ctx.stroke();
+</script>
 </body>
 </html>
+
 
 
 
