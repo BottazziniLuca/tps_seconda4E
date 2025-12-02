@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>HTML5 Canvas bottazzini grafico a stella </h1>
+<h1>HTML5 Canvas arc() Method</h1>
 
 <canvas id="myCanvas" width="300" height="200">
 Sorry, your browser does not support canvas.
@@ -16,21 +16,22 @@ ctx.arc(150,100,75,0,2*Math.PI);
 ctx.stroke();
 ctx.beginPath();
 
-// Set a start-point
-ctx.moveTo(150, 0);
+// Set a start-point 
+ctx.moveTo(150, 40);
 
-// Set an end-point
-ctx.lineTo(195, 135);
-ctx.lineTo(80, 52);
-ctx.lineTo(220, 52);
-ctx.lineTo(105, 135);
-ctx.lineTo(150, 0);
+// Set an end-point 
+ctx.lineTo(195, 175);
+ctx.lineTo(80, 92);
+ctx.lineTo(220, 92);
+ctx.lineTo(105, 175);
+ctx.lineTo(150, 40);
 
-// Stroke it (Do the Drawing)
+// Stroke it 
 ctx.stroke();
 </script>
 </body>
 </html>
+
 
 
 
